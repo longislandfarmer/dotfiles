@@ -8,13 +8,10 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Vundle {{{2
 Plugin 'gmarik/Vundle.vim'
 
 
 " File exploring (lusty, mru) {{{2
-Plugin 'sjbach/lusty.git'                          " Lusty explorer
-set hidden                                         " Required by lusty explorer
 Plugin 'yegappan/mru'                              " Most recent files
 let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*'   " Skip tmp files
 
@@ -123,6 +120,9 @@ set history=1000                             " 1000 command history
 set backupdir=~/.vim/backup_files
 set directory=~/.vim/backup_files
 
+" Mouse {{{2
+set mouse=a
+
 
 " Ctags related Stuff {{{1
 " search for ctags tag file from current folder up to the root folder
@@ -144,8 +144,8 @@ let g:mapleader=","                 " map leader
 " Normal mode maps
 nnoremap <space> 5jzz
 nnoremap <backspace> 5kzz
-nnoremap <leader>lv :MRU<CR>
-nnoremap <leader>v :execute ":MRU " . getcwd() . "/"<CR>
+nnoremap <leader>v :MRU<CR>
+nnoremap <leader>f :FZF<CR>
 nnoremap <leader>lt :TagbarToggle<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
@@ -156,11 +156,13 @@ nnoremap <leader>n :bprevious<CR>
 nnoremap <leader>a :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 
 " Input mode maps
-" jk to enter normal node
-inoremap jk <Esc>
 " map CTRL-E to end-of-line (insert mode)
 inoremap <C-e> <esc>$i<right>
+nnoremap <C-e> $
 " map CTRL-A to beginning-of-line (insert mode)
 inoremap <C-a> <esc>^i
+nnoremap <C-a> ^
+
+set rtp+=~/.fzf
 
 " vim: foldenable foldmethod=marker:

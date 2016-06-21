@@ -18,3 +18,6 @@ setopt   no_share_history # This option both imports new commands from the histo
 
 zstyle ':completion:*' path-completion false #do not attempt to complete partial path /a/b -> /aaaa/bbb, really slow on nfs
 zstyle ':completion:*' accept-exact-dirs true #do not attempt to complete partial path /a/b -> /aaaa/bbb, really slow on nfs
+
+# disable git auto complete, always crash on me
+
