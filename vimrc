@@ -54,7 +54,7 @@ Plugin 'moll/vim-bbye'                  " Bdelete: close buffer without closing 
 
 Plugin 'hynek/vim-python-pep8-indent'   " make python code indent like PEP8
 
-Plugin 'rking/ag.vim'                   " ag
+Plugin 'mileszs/ack.vim'                " ack
 Plugin 'ntpeters/vim-better-whitespace' " white-space
 
 Plugin 'mjnicky/vim-cpp-enhanced-highlight' " cpp highlight
@@ -146,6 +146,7 @@ nnoremap <space> 5jzz
 nnoremap <backspace> 5kzz
 nnoremap <leader>v :MRU<CR>
 nnoremap <leader>f :FZF<CR>
+nnoremap <leader>r :FZF %:h<CR>
 nnoremap <leader>lt :TagbarToggle<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
