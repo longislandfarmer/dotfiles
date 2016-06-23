@@ -11,12 +11,10 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 
-" File exploring (lusty, mru) {{{2
 Plugin 'yegappan/mru'                              " Most recent files
 let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*'   " Skip tmp files
 
 
-" Development (tagbar, ultisnips) {{{2
 Plugin 'majutsushi/tagbar'
 " Tagbar configs
 "let g:tagbar_left = 1
@@ -34,7 +32,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 Plugin 'mjnicky/vim-snippets'                " My own repo of snippets
 let g:ultisnips_python_style="numpy"
 
-" Misc (colorschemes, tmuxline, bufferline) {{{2
 Plugin 'flazz/vim-colorschemes'         " a lot of color schemes
 
 Plugin 'godlygeek/tabular'              " text alignment
@@ -58,6 +55,8 @@ Plugin 'mileszs/ack.vim'                " ack
 Plugin 'ntpeters/vim-better-whitespace' " white-space
 
 Plugin 'mjnicky/vim-cpp-enhanced-highlight' " cpp highlight
+
+Plugin 'tpope/vim-dispatch'  " dispatch commands in tmux pane async
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -84,13 +83,12 @@ set t_Co=256
 hi Normal ctermbg=NONE
 hi nonText ctermbg=NONE
 
-" Tab settings {{{2
+" Tab & Indent settings {{{2
 set expandtab                   " By default, expand tabs to spaces
 set shiftwidth=4                " Indents using tab, indenting etc default to 4
 set softtabstop=4               " Tab/backspace "feel" as if inserting/deleting a full tab
 set tabstop=4                   " Tabs (if present) are displayed as 4 spaces
 
-" Indent settings {{{2
 set autoindent                  " Indent lines automatically
 set smartindent                 " ...and try to be smart about it
 set cindent
@@ -164,6 +162,7 @@ nnoremap <C-e> $
 inoremap <C-a> <esc>^i
 nnoremap <C-a> ^
 
+" fzf is seperately installed by git into ~/.fzf
 set rtp+=~/.fzf
 
 " vim: foldenable foldmethod=marker:
