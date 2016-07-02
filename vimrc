@@ -10,7 +10,8 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-
+set hidden
+Plugin 'sjbach/lusty'    " lusty explorer
 Plugin 'yegappan/mru'                              " Most recent files
 let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*'   " Skip tmp files
 
@@ -52,6 +53,8 @@ Plugin 'moll/vim-bbye'                  " Bdelete: close buffer without closing 
 Plugin 'hynek/vim-python-pep8-indent'   " make python code indent like PEP8
 
 Plugin 'mileszs/ack.vim'                " ack
+let g:ackprg = 'ag --vimgrep'           " use ag for ack
+
 Plugin 'ntpeters/vim-better-whitespace' " white-space
 
 Plugin 'mjnicky/vim-cpp-enhanced-highlight' " cpp highlight
