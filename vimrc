@@ -10,10 +10,9 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
+set rtp+=~/.fzf
+Plugin 'junegunn/fzf.vim'    "FZF!
 Plugin 'vim-scripts/a.vim'
-Plugin 'yegappan/mru'                              " Most recent files
-let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*'   " Skip tmp files
-
 
 Plugin 'majutsushi/tagbar'
 " Tagbar configs
@@ -143,9 +142,10 @@ let g:mapleader=","                 " map leader
 " Normal mode maps
 nnoremap <space> 5jzz
 nnoremap <backspace> 5kzz
-nnoremap <leader>v :MRU<CR>
-nnoremap <leader>f :FZF<CR>
-nnoremap <leader>r :FZF %:h<CR>
+nnoremap <leader>v :History<CR>
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>r :Files %:h<CR>
+nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>lt :TagbarToggle<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
@@ -162,29 +162,5 @@ nnoremap <C-e> $
 " map CTRL-A to beginning-of-line (insert mode)
 inoremap <C-a> <esc>^i
 nnoremap <C-a> ^
-
-
-" fzf setup {{{1
-
-" fzf is seperately installed by git into ~/.fzf
-set rtp+=~/.fzf
-" setup buffer exploring
-function! s:buflist()
-  redir => ls
-  silent ls
-  redir END
-  return split(ls, '\n')
-endfunction
-
-function! s:bufopen(e)
-  execute 'buffer' matchstr(a:e, '^[ 0-9]*')
-endfunction
-
-nnoremap <silent> <Leader>b :call fzf#run({
-\   'source':  reverse(<sid>buflist()),
-\   'sink':    function('<sid>bufopen'),
-\   'options': '+m',
-\   'down':    len(<sid>buflist()) + 2
-\ })<CR>
 
 " vim: foldenable foldmethod=marker:
