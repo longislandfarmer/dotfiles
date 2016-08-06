@@ -43,8 +43,7 @@ let g:airline_theme='bubblegum'
 Plugin 'edkolev/tmuxline.vim'           " tmuxline to make tmux consistent with vim
 let g:tmuxline_powerline_separators = 0 " We don't have powerline fonts
 
-Plugin 'bling/vim-bufferline'           " bufferline shows buffers in status line
-let g:bufferline_echo = 0
+Plugin 'fholgado/minibufexpl.vim'       " buffer explorer
 
 Plugin 'tomtom/tcomment_vim'            " Commenting/Uncommenting
 
