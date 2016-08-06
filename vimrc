@@ -10,8 +10,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-set hidden
-Plugin 'sjbach/lusty'    " lusty explorer
+Plugin 'vim-scripts/a.vim'
 Plugin 'yegappan/mru'                              " Most recent files
 let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*'   " Skip tmp files
 
@@ -150,11 +149,11 @@ nnoremap <leader>r :FZF %:h<CR>
 nnoremap <leader>lt :TagbarToggle<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
-nnoremap <leader>bd :Bdelete<CR>
+nnoremap <leader>d :Bdelete<CR>
 nnoremap <leader>m :bnext<CR>
 nnoremap <leader>n :bprevious<CR>
 ",a to swithc to .h or .cpp file
-nnoremap <leader>a :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
+nnoremap <leader>a :A<CR>
 
 " Input mode maps
 " map CTRL-E to end-of-line (insert mode)
@@ -164,7 +163,28 @@ nnoremap <C-e> $
 inoremap <C-a> <esc>^i
 nnoremap <C-a> ^
 
+
+" fzf setup {{{1
+
 " fzf is seperately installed by git into ~/.fzf
 set rtp+=~/.fzf
+" setup buffer exploring
+function! s:buflist()
+  redir => ls
+  silent ls
+  redir END
+  return split(ls, '\n')
+endfunction
+
+function! s:bufopen(e)
+  execute 'buffer' matchstr(a:e, '^[ 0-9]*')
+endfunction
+
+nnoremap <silent> <Leader>b :call fzf#run({
+\   'source':  reverse(<sid>buflist()),
+\   'sink':    function('<sid>bufopen'),
+\   'options': '+m',
+\   'down':    len(<sid>buflist()) + 2
+\ })<CR>
 
 " vim: foldenable foldmethod=marker:
