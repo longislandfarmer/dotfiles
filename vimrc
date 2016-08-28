@@ -41,8 +41,6 @@ let g:airline_theme='bubblegum'
 Plugin 'edkolev/tmuxline.vim'           " tmuxline to make tmux consistent with vim
 let g:tmuxline_powerline_separators = 0 " We don't have powerline fonts
 
-Plugin 'fholgado/minibufexpl.vim'       " buffer explorer
-
 Plugin 'tomtom/tcomment_vim'            " Commenting/Uncommenting
 
 Plugin 'moll/vim-bbye'                  " Bdelete: close buffer without closing window
