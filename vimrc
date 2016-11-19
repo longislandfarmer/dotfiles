@@ -10,7 +10,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-set rtp+=~/.fzf
+"set rtp+=~/.fzf
 Plugin 'junegunn/fzf.vim'    "FZF!
 Plugin 'vim-scripts/a.vim'
 
@@ -36,6 +36,7 @@ Plugin 'flazz/vim-colorschemes'         " a lot of color schemes
 Plugin 'godlygeek/tabular'              " text alignment
 
 Plugin 'bling/vim-airline'              " Airline status bar
+Plugin 'vim-airline/vim-airline-themes' " Airline schemes
 let g:airline_theme='bubblegum'
 
 Plugin 'edkolev/tmuxline.vim'           " tmuxline to make tmux consistent with vim
