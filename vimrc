@@ -31,6 +31,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 Plugin 'mjnicky/vim-snippets'                " My own repo of snippets
 let g:ultisnips_python_style="numpy"
 
+Plugin 'weynhamz/vim-plugin-minibufexpl'  " buffer explroe
+
 Plugin 'flazz/vim-colorschemes'         " a lot of color schemes
 
 Plugin 'godlygeek/tabular'              " text alignment
