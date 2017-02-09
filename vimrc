@@ -10,7 +10,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-"set rtp+=~/.fzf
+set rtp+=~/.fzf
 Plugin 'junegunn/fzf.vim'    "FZF!
 Plugin 'vim-scripts/a.vim'
 
