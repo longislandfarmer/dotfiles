@@ -31,7 +31,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 Plugin 'mjnicky/vim-snippets'                " My own repo of snippets
 let g:ultisnips_python_style="numpy"
 
-Plugin 'weynhamz/vim-plugin-minibufexpl'  " buffer explroe
+" Plugin 'weynhamz/vim-plugin-minibufexpl'  " buffer explroe
 
 Plugin 'flazz/vim-colorschemes'         " a lot of color schemes
 
@@ -40,6 +40,8 @@ Plugin 'godlygeek/tabular'              " text alignment
 Plugin 'bling/vim-airline'              " Airline status bar
 Plugin 'vim-airline/vim-airline-themes' " Airline schemes
 let g:airline_theme='bubblegum'
+let g:airline#extensions#tabline#enabled = 1
+
 
 Plugin 'edkolev/tmuxline.vim'           " tmuxline to make tmux consistent with vim
 let g:tmuxline_powerline_separators = 0 " We don't have powerline fonts
