@@ -31,7 +31,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 Plugin 'mjnicky/vim-snippets'                " My own repo of snippets
 let g:ultisnips_python_style="numpy"
 
-" Plugin 'weynhamz/vim-plugin-minibufexpl'  " buffer explroe
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
 
 Plugin 'flazz/vim-colorschemes'         " a lot of color schemes
 
