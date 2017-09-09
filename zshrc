@@ -2,7 +2,9 @@ export EDITOR='/usr/bin/vim -X'
 export VISUAL='/usr/bin/vim -X'
 export PAGER=less
 export LESS=-R
-export TERM=screen-256color
+# it seems that I don't need to set this in ubuntu
+#export TERM=screen-256color
+#export TERM=xterm-256color
 
 # Aliases
 alias l='ls -l'
@@ -12,5 +14,5 @@ alias la='ls -la'
 alias v='/usr/bin/vim -X'
 alias gs='git status'
 alias gc='git commit'
-alias gp='git pull'
+alias gcam='git commit -am'
 alias me='ps -f -u junma --forest'
