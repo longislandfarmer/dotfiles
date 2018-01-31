@@ -1,0 +1,10 @@
+set nocompatible
+
+let mapleader=","                   " mapleader ','
+let g:mapleader=","                 " map leader
+
+" Normal mode maps
+nnoremap <space> 5jzz
+nnoremap <backspace> 5kzz
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
