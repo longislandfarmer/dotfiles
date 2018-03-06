@@ -16,3 +16,6 @@ alias gs='git status'
 alias gc='git commit'
 alias gcam='git commit -am'
 alias me='ps -f -u junma --forest'
+
+# reclaim ctrl-s to avoid freezing vim
+stty stop undef
