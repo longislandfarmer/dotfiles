@@ -155,6 +155,7 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>d :Bdelete<CR>
 nnoremap <leader>m :bnext<CR>
 nnoremap <leader>n :bprevious<CR>
+nnoremap <c-s> <nop>
 ",a to swithc to .h or .cpp file
 nnoremap <leader>a :A<CR>
 
