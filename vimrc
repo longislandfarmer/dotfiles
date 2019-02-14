@@ -95,7 +95,7 @@ set tabstop=4                   " Tabs (if present) are displayed as 4 spaces
 set autoindent                  " Indent lines automatically
 set smartindent                 " ...and try to be smart about it
 set cindent
-set cinoptions=g0.5sh0.5s       " no indent for public: and private:
+set cinoptions=g0.5sh0.5sN-s    " half indent for public: and private:, no indent for namespaces.
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
