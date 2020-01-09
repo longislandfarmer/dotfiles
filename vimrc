@@ -3,7 +3,12 @@
 
 call plug#begin('~/.vim/plugged')
 
-Plug '~/.fzf'
+if $FZFVIMPATH != ""
+    Plug $FZFVIMPATH
+else
+    Plug '~/.fzf'
+endif
+
 Plug 'junegunn/fzf.vim'    "FZF!
 
 Plug 'vim-scripts/a.vim'   " header/cpp switch
