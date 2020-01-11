@@ -60,14 +60,6 @@ Plug 'mjnicky/vim-cpp-enhanced-highlight' " cpp highlight
 
 Plug 'tpope/vim-dispatch'  " dispatch commands in tmux pane async
 
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
-set completeopt-=preview
-
-
 call plug#end()
 
 
