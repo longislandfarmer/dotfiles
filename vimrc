@@ -18,13 +18,13 @@ let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
 let g:tagbar_sort = 0
 
-" Plug 'SirVer/ultisnips'                    " ultisnipts for snippets templates
-" let g:UltiSnipsExpandTrigger="<c-j>"         " tab is used by YouCompleteMe, use Ctrl-j to activate
-" let g:UltiSnipsJumpForwardTrigger="<c-j>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+Plug 'SirVer/ultisnips'                    " ultisnipts for snippets templates
+let g:UltiSnipsExpandTrigger="<c-j>"         " tab is used by YouCompleteMe, use Ctrl-j to activate
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
-" Plug 'mjnicky/vim-snippets'                " My own repo of snippets
-" let g:ultisnips_python_style="numpy"
+Plug 'mjnicky/vim-snippets'                " My own repo of snippets
+let g:ultisnips_python_style="numpy"
 
 Plug 'bling/vim-airline'              " Airline status bar
 Plug 'vim-airline/vim-airline-themes' " Airline schemes
