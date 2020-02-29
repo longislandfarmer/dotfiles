@@ -111,6 +111,7 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>d :bd<CR>
 nnoremap <leader>m :bnext<CR>
 nnoremap <leader>n :bprevious<CR>
+nnoremap <leader>s :AckFromSearch<CR>
 nnoremap <c-s> <nop>
 ",a to swithc to .h or .cpp file
 nnoremap <leader>a :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
