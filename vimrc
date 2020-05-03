@@ -13,7 +13,7 @@ Plug 'majutsushi/tagbar'
 " Tagbar configs
 "let g:tagbar_left = 1
 let g:tagbar_width = 50
-let g:tagbar_autoclose = 0
+let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
 let g:tagbar_sort = 0
@@ -45,6 +45,8 @@ Plug 'hynek/vim-python-pep8-indent'   " make python code indent like PEP8
 Plug 'ntpeters/vim-better-whitespace' " white-space
 Plug 'mjnicky/vim-cpp-enhanced-highlight' " cpp highlight
 Plug 'tpope/vim-dispatch'  " dispatch commands in tmux pane async
+
+Plug 'ycm-core/YouCompleteMe'
 
 call plug#end()
 
