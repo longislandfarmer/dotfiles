@@ -18,14 +18,6 @@ let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
 let g:tagbar_sort = 0
 
-" Plug 'SirVer/ultisnips'                    " ultisnipts for snippets templates
-" let g:UltiSnipsExpandTrigger="<c-j>"         " tab is used by YouCompleteMe, use Ctrl-j to activate
-" let g:UltiSnipsJumpForwardTrigger="<c-j>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-
-" Plug 'mjnicky/vim-snippets'                " My own repo of snippets
-" let g:ultisnips_python_style="numpy"
-
 Plug 'bling/vim-airline'              " Airline status bar
 Plug 'vim-airline/vim-airline-themes' " Airline schemes
 let g:airline_theme='bubblegum'
@@ -38,7 +30,6 @@ if executable('ag')
     let g:ackprg = 'ag --vimgrep'
 endif
 
-Plug 'tpope/vim-fugitive'             " vim git plugin
 Plug 'flazz/vim-colorschemes'         " a lot of color schemes
 Plug 'tpope/vim-commentary'           " Commenting/Uncommenting
 Plug 'hynek/vim-python-pep8-indent'   " make python code indent like PEP8
@@ -46,7 +37,6 @@ Plug 'ntpeters/vim-better-whitespace' " white-space
 Plug 'mjnicky/vim-cpp-enhanced-highlight' " cpp highlight
 Plug 'tpope/vim-dispatch'  " dispatch commands in tmux pane async
 
-Plug 'ycm-core/YouCompleteMe'
 
 call plug#end()
 
